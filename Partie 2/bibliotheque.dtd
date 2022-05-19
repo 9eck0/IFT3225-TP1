@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bibliotheque (livres, auteurs)>
+
+<!ELEMENT livres (livre+)>
+<!ELEMENT livre (titre, annee, prix)>
+<!ATTLIST livre
+    langue CDATA #REQUIRED
+    auteurs IDREF #REQUIRED>

@@ -1,0 +1,20 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+element bibliotheque {
+    element livres {
+        element livre {
+            attribute langue { text } &
+            attribute auteurs { xsd:IDREF } &
+            
+            (element titre { text },
+            element annee { year },
+            element prix { text })
+        }*
+    },
+    
+    element auteurs {
+        element auteur {
+            
+        }*
+    }
+}
