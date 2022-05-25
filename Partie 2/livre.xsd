@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="livre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titre">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="60"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="annee" type="xs:gYear"/>
+                <xs:element name="prix" minOccurs="1" type="xs:decimal"/>
+            </xs:sequence>
+            <xs:attribute name="langue" type="xs:language"/>
+            <xs:attribute name="auteurs" type="xs:IDREFS"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
