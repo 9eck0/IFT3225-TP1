@@ -1,6 +1,6 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
-element bibliotheque {
+start = element bibliotheque {
     element livres {
         element livre {
             (
@@ -16,7 +16,7 @@ element bibliotheque {
     element auteurs {
         element auteur {
             attribute ident { string },
-            #url = xsd:string { pattern = "^((https?|ftp|file|nfs|xri)://)?[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&amp;@#/%=~_|]" },
+            
             
             (
             element nom { text } &
@@ -24,9 +24,9 @@ element bibliotheque {
             ),
             element pays { xsd:language },
             element commentaire { text }?,
-            element photo { xsd:anyURI }
+            element photo { url }
         }*
     }
 }
 
-
+url = xsd:string { pattern = "^((https?|ftp|file|nfs|xri)://)?[\-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[\-a-zA-Z0-9+&amp;@#/%=~_|]" }
