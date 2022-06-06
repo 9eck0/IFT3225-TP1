@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified">
+
+    <xs:element name="auteur" type="auteurTemplate"/>
+
+    <xs:complexType name="auteurTemplate">
+        <xs:sequence>
+            <!-- Utiliser un choix de séquences pour simuler <xs:all> à l'intérieur d'une séquence -->
+            <xs:choice>
+                <xs:sequence>
+                    <xs:element name="nom" type="xs:string"/>
+                    <xs:element name="prenom" type="xs:string"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:element name="prenom" type="xs:string"/>
+                    <xs:element name="nom" type="xs:string"/>
+                </xs:sequence>
+            </xs:choice>
+            <xs:element name="pays" type="xs:string"/>
+            <xs:element minOccurs="0" name="commentaire" type="xs:string"/>
+            <xs:element name="photo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern
+                            value="^((https?|ftp|file|nfs|xri)://)?[a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[a-zA-Z0-9+&amp;@#/%=~_|]"
+                        />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ident" type="xs:ID"/>
+    </xs:complexType>
+</xs:schema>
