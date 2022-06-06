@@ -7,15 +7,20 @@ start = element bibliotheque {
             attribute langue { text } &
             attribute auteurs { xsd:IDREFS }
             ),
-            element titre { text },
+            element titre { xsd:string { maxLength = "60" }},
             element annee { xsd:gYear },
-            element prix { xsd:decimal }
+            element prix { 
+                attribute devise { text },
+                xsd:decimal{ minInclusive = "0" maxInclusive = "100"} 
+            },
+            element couverture { url }?,
+            element commentaire { text }?
         }*
     },
-    
+ 
     element auteurs {
         element auteur {
-            attribute ident { string },
+            attribute ident { xsd:ID },
             
             
             (
@@ -29,4 +34,5 @@ start = element bibliotheque {
     }
 }
 
-url = xsd:string { pattern = "^((https?|ftp|file|nfs|xri)://)?[\-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[\-a-zA-Z0-9+&amp;@#/%=~_|]" }
+
+url = xsd:string { pattern = "((https?|ftp|file|nfs|xri)://)?[\-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[\-a-zA-Z0-9+&amp;@#/%=~_|]*" }
