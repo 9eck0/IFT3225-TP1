@@ -2,7 +2,7 @@
 
 <!ELEMENT bibliotheque (livres, auteurs)>
 
-<!ELEMENT livres (livre+)>
+<!ELEMENT livres (livre*)>
 <!ELEMENT livre (titre, annee, prix)>
 <!ATTLIST livre
     langue CDATA #REQUIRED

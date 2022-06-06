@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<import/>
+<!--
+    <!DOCTYPE bibliotheque SYSTEM "bibliotheque.dtd">
+-->
+
+<?xml-stylesheet type="text/xsl" href="bibliotheque-visualisation.xsl"?>
+
+<bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bibliotheque.xsd">
+    <livres>
+        <livre langue="en-CA" auteurs="auteur1">
+            <titre>Livre 1</titre>
+            <annee>2000</annee>
+            <prix devise="CAD">14.99</prix>
+            <couverture>https://www.google.ca/</couverture>
+            <commentaire>Résumé du livre 1.</commentaire>
+        </livre>
+    </livres>
+    <auteurs>
+        <auteur ident="auteur1">
+            <nom>Nom1</nom>
+            <prenom>Prenom1</prenom>
+            <pays>Canada</pays>
+            <commentaire>Auteur exclusif de Livre 1.</commentaire>
+            <photo>https://www.google.ca/</photo>
+        </auteur>
+    </auteurs>
+</bibliotheque>

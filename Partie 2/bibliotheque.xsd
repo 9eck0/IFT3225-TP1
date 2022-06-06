@@ -1,47 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <xs:import schemaLocation="livre.xsd" namespace="http://www.w3.org/2001/XMLSchema"/>
+    <xs:include schemaLocation="livre.xsd"/>
+    <xs:include schemaLocation="auteur.xsd"/>
+
     <xs:element name="bibliotheque">
         <xs:complexType>
-            <xs:sequence>
+            <xs:all>
                 <xs:element name="livres">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="livre" type="livre" maxOccurs="unbounded" minOccurs="0"/>
+                            <xs:element name="livre" type="livreTemplate" maxOccurs="unbounded"
+                                minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="auteurs">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="auteur">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:choice>
-                                            <xs:element name="nom" type="xs:string"/>
-                                            <xs:element name="prenom" type="xs:string"/>
-                                        </xs:choice>
-                                        <xs:element name="pays" type="xs:string"/>
-                                        <xs:element minOccurs="0" name="commentaire"
-                                            type="xs:string"/>
-                                        <xs:element name="photo">
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:string">
-                                                  <xs:pattern
-                                                  value="^((https?|ftp|file|nfs|xri)://)?[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&amp;@#/%=~_|]"
-                                                  />
-                                                </xs:restriction>
-                                            </xs:simpleType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute name="ident" type="xs:ID"/>
-                                </xs:complexType>
-                            </xs:element>
+                            <xs:element name="auteur" type="auteurTemplate" maxOccurs="unbounded"
+                                minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-            </xs:sequence>
+            </xs:all>
         </xs:complexType>
     </xs:element>
 </xs:schema>

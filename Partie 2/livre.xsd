@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:element name="livre">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="titre">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:maxLength value="60"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="annee" type="xs:gYear"/>
-                <xs:element name="prix" minOccurs="1" type="xs:decimal"/>
-            </xs:sequence>
-            <xs:attribute name="langue" type="xs:language"/>
-            <xs:attribute name="auteurs" type="xs:IDREFS"/>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name="livre" type="livreTemplate"/>
+
+    <xs:complexType name="livreTemplate">
+        <xs:sequence>
+            <xs:element name="titre">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="60"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="annee" type="xs:gYear"/>
+            <xs:element name="prix" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="prixRestriction">
+                            <xs:attribute name="devise" type="xs:string" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="couverture">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern
+                            value="^((https?|ftp|file|nfs|xri)://)?[a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[a-zA-Z0-9+&amp;@#/%=~_|]"
+                        />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="commentaire" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="langue" type="xs:language"/>
+        <xs:attribute name="auteurs" type="xs:IDREFS"/>
+    </xs:complexType>
+
+    <xs:simpleType name="prixRestriction">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
