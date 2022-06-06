@@ -2,8 +2,29 @@
 
 <!ELEMENT bibliotheque (livres, auteurs)>
 
+
+
 <!ELEMENT livres (livre*)>
-<!ELEMENT livre (titre, annee, prix)>
+<!ELEMENT livre (titre, annee, prix, couverture, commentaire)>
 <!ATTLIST livre
     langue CDATA #REQUIRED
     auteurs IDREF #REQUIRED>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT prix (#PCDATA)>
+<!ELEMENT couverture (#PCDATA)>
+
+
+
+<!ELEMENT auteurs (auteur*)>
+<!ELEMENT auteur (((nom, prenom)|(prenom, nom)), pays, commentaire?, photo)>
+<!ATTLIST auteur
+    ident ID #REQUIRED>
+
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>    <!-- Pas de support regex dans DTD -->
+
+<!-- commentaire est une restriction commune entre livre et auteur -->
+<!ELEMENT commentaire (#PCDATA)>

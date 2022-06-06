@@ -25,7 +25,7 @@
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:pattern
-                            value="^((https?|ftp|file|nfs|xri)://)?[a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[a-zA-Z0-9+&amp;@#/%=~_|]"
+                            value="^((https?|ftp|file|nfs|xri)://)?[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&amp;@#/%=~_|]"
                         />
                     </xs:restriction>
                 </xs:simpleType>
