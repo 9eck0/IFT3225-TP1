@@ -1,0 +1,47 @@
+/* 
+ * TP1
+ * Par:
+ * - Liu, Rui Jie
+ * - Lian, Henxing
+ */
+
+.main-column {
+    width: 60vw;
+    min-width: 600px;
+}
+
+.table-display {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-display, .table-display th, .table-display td {
+    border: 1px solid;
+}
+
+.table-display th, .table-display td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.book-cover {
+    height: 150px;
+}
+
+.book-comments {
+    width: 20vw;
+    min-width: 100px;
+}
+
+.author-image {
+    height: 150px;
+}

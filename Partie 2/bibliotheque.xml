@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+ TP1
+ Par:
+ - Liu, Rui Jie
+ - Lian, Henxing
+ -->
+
 <!-- Schéma DTD -->
 <!DOCTYPE bibliotheque SYSTEM "bibliotheque.dtd">
 
@@ -17,7 +24,7 @@
             <titre>Livre 1</titre>
             <annee>2000</annee>
             <prix devise="CAD">14.99</prix>
-            <couverture>https://www.google.ca/</couverture>
+            <couverture>https://images.unsplash.com/photo-1528459105426-b9548367069b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=364&amp;q=80</couverture>
             <commentaire>Résumé du livre 1.</commentaire>
         </livre>
         <!-- 2e exemple de livre: minimum nécessaire d'éléments & attributs -->
@@ -34,14 +41,14 @@
             <prenom>Alice</prenom>
             <pays>Canada</pays>
             <commentaire>Auteur exclusif de Livre 1.</commentaire>
-            <photo>https://www.google.ca/</photo>
+            <photo>https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80</photo>
         </auteur>
         <!-- 2e exemple de livre: minimum nécessaire d'éléments & attributs -->
         <auteur ident="auteur2">
             <prenom>Bob</prenom>
             <nom>Dupont</nom>
             <pays>France</pays>
-            <photo>https://www.google.ca/</photo>
+            <photo></photo>
         </auteur>
     </auteurs>
 </bibliotheque>

@@ -1,5 +1,10 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
+# TP1
+# Par:
+# - Liu, Rui Jie
+# - Lian, Henxing
+
 start = element bibliotheque {
     element livres {
         element livre {
