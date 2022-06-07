@@ -9,88 +9,147 @@
         }
 
         #portrait {
-            height: 30vw;
-            width: 30vw;
+            height: 240px;
+            width: 160px;
             object-fit: cover;
+            padding-right: 15px;
         }
         .indent{
             margin-left: 30px;
         }
+        .info-aside {
+            padding-top: 120px;
+            padding-right: 8px;
+            padding-left: 1vw;
+            width: 170px;
+        }
+        .info-aside nav {
+            padding-top: 50px;
+            position: fixed;
+        }
+        .info-main {
+            padding-right: 5vw;
+            padding-top: 24px;
+        }
+        .nav-link {
+            display: block;
+            padding: 6px;
+            text-decoration: none;
+        }
     </style>
 </head>
-<body>
+
+<body style="display: flex;">
     <a name="top"></a>
-    <div>
-        <header>
-            <h1 id="page-title">CV</h1>
-            <img id="portrait" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640" alt="Photo de profil"/>
-            <div>
-                Informations générales:<br>
-                Âge: 29<br>
-                Adresse:
-                <div class="indent">
-                    3131 Boul St-Martin O<br>
-                    Laval QC H7T 2Z5<br>
-                    Canada<br>
+    <aside class="info-aside">
+        <nav>
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#infoG">Informations</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Formation">Formation</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Compétences">Compétences</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Expériences professionnelles">Expériences</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Langues">Langues</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Centres d'intérêt">Centres d'intérêt</a> 
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div style="display: block;">
+        <div class="info-main">
+            <header>
+                <h1 id="page-title">John Smith</h1>
+                <div style="display: flex">
+                    <img id="portrait" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640" alt="Photo de profil"/>
+                    <div>
+                        <h3 id="InfoG">Informations générales:</h3>
+                        Âge: 29<br>
+                        Adresse:
+                        <div class="indent">
+                            3131 Boul St-Martin O<br>
+                            Laval QC H7T 2Z5<br>
+                            Canada<br>
+                        </div>
+                        <p>
+                            Informatique diplômé, j'ai une expérience de 2 ans en tant qu'Assistant<br>
+                            photographe,et 3 ans en tant que Photographe indépendant chez OUTFRONT<br>
+                            Media Montreal. Je suis passionné et ai une bonne intuition avec la<br>
+                            photographie humaine, et je saurai mettre au service de votre entreprise.<br>
+                        </p>
+                    </div>
                 </div>
-                <p>
-                Informatique diplômé, j'ai une expérience de 2 ans en tant qu'Assistant photographe,<br>
-                et 3 ans en tant que Photographe indépendant chez OUTFRONT Media Montreal. <br>
-                Je suis passionné et ai une bonne intuition avec la photographie humaine, <br>
-                et je saurai mettre au service de votre entreprise.<br>
-                </p>
-            </div>
-        </header>
-    </div>
-    <article>
-        <h2>Formation</h2>
-        <ul>
-            <li>Polytechique: Baccalauréat en génie logiciel (2019-2022)</li>
-            <li>Concordia: Études cinématographiques</li>
-        </ul>
-    </article>
-
-    <article>
-        <h2>Compétences</h2>
-        <ul>
-            <li>Développement et évaluation logiciel - 4 ans
-                <ul>
-                    <li></li>
-                </ul>
-            </li>
-            <li>Photographie (Fujifilm X-E4) - 7 ans</li>
-        </ul>
-    </article>
-    <article>
-        <h2>Expériences professionnelles</h2>
-        <ul>
-            <li>Été 2020: Autodesk Montreal
-                <ul>
-                    <li></li>
-                </ul>
-            </li>
-            <li>2014-2019: OUTFRONT Media Montreal
-                <ul>
-                    <li>Photographe</li>
-                    <li>Assistant photographe</li>
-                    <li>Gestion des actifs numériques</li>
-                </ul>
-            </li>
-        </ul>
-    </article>
-    <article>
-        <h2>Langues</h2>
-
-    </article>
-    <article>
-        <h2>Centres d'intérêt</h2>
-
-    </article>
-    <footer>
-        <a href="#top">Retour vers le haut</a>
-        <div id="update-date">
-            Cette page a été mise à jour le 2022-05-20.
+            </header>
         </div>
-    </footer>
+        <article>
+            <h2 id="Formation">Formation</h2>
+            <ul>
+                <li>Polytechique: Baccalauréat en génie logiciel (2019-2022)</li>
+                <li>Concordia: Études cinématographiques</li>
+            </ul>
+        </article>
+        <article>
+            <h2 id="Compétences">Compétences</h2>
+            <ul>
+                <li>Développement et évaluation logiciel - 4 ans</li>
+                <li>Photographie (Fujifilm X-E4) - 7 ans</li>
+            </ul>
+        </article>
+        <article>
+            <h2 id="Expériences professionnelles">Expériences professionnelles</h2>
+            <ul>
+                <li>Été 2020: Autodesk Montreal
+                    <ul>
+                        <li>Graphisme</li>
+                        <li>Photographe</li>
+                    </ul>
+                </li>
+                <li>2014-2019: OUTFRONT Media Montreal
+                    <ul>
+                        <li>Photographe</li>
+                        <li>Assistant photographe</li>
+                        <li>Gestion des actifs numériques</li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2 id="Langues">Langues</h2>
+            <ul>
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Espagnol</li>
+            </ul>
+        </article>
+        <article>
+            <h2 id="Centres d'intérêt">Centres d'intérêt</h2>
+            <ul>
+                <li>
+                    Photographie
+                </li>
+                <li>
+                    Infographie
+                </li>
+                <li>
+                    Programmation front-end
+                </li>
+            </ul>
+        </article>
+        <footer>
+            <a href="#top">Retour vers le haut</a>
+            <div id="update-date">
+                Cette page a été mise à jour le 2022-05-20.
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
