@@ -25,7 +25,7 @@
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:pattern
-                            value="^((https?|ftp|file|nfs|xri)://)?[-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&amp;@#/%=~_|]"
+                            value="((https?|ftp|file|nfs|xri)://)?[\-a-zA-Z0-9+&amp;@#/%?=~_|!:,.;]*[\-a-zA-Z0-9+&amp;@#/%=~_|]*"
                         />
                     </xs:restriction>
                 </xs:simpleType>
@@ -38,7 +38,7 @@
 
     <xs:simpleType name="prixRestriction">
         <xs:restriction base="xs:decimal">
-            <xs:minInclusive value="1"/>
+            <xs:minInclusive value="0"/>
             <xs:maxInclusive value="100"/>
         </xs:restriction>
     </xs:simpleType>

@@ -10,7 +10,7 @@ start = element bibliotheque {
             element titre { xsd:string { maxLength = "60" }},
             element annee { xsd:gYear },
             element prix { 
-                attribute devise { text },
+                attribute devise { text }?,
                 xsd:decimal{ minInclusive = "0" maxInclusive = "100"} 
             },
             element couverture { url }?,

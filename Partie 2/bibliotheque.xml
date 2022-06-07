@@ -12,6 +12,7 @@
 <!-- Élément racine, schéma XSD -->
 <bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bibliotheque.xsd">
     <livres>
+        <!-- 1er exemple de livre: tous les éléments & attributs -->
         <livre langue="en-CA" auteurs="auteur1">
             <titre>Livre 1</titre>
             <annee>2000</annee>
@@ -19,13 +20,27 @@
             <couverture>https://www.google.ca/</couverture>
             <commentaire>Résumé du livre 1.</commentaire>
         </livre>
+        <!-- 2e exemple de livre: minimum nécessaire d'éléments & attributs -->
+        <livre langue="fr-FR" auteurs="auteur1 auteur2">
+            <titre>Exemplaire gratuit</titre>
+            <annee>1999</annee>
+            <prix>0</prix>
+        </livre>
     </livres>
     <auteurs>
+        <!-- 1er exemple de livre: tous les éléments & attributs -->
         <auteur ident="auteur1">
-            <nom>Nom1</nom>
-            <prenom>Prenom1</prenom>
+            <nom>Tremblay</nom>
+            <prenom>Alice</prenom>
             <pays>Canada</pays>
             <commentaire>Auteur exclusif de Livre 1.</commentaire>
+            <photo>https://www.google.ca/</photo>
+        </auteur>
+        <!-- 2e exemple de livre: minimum nécessaire d'éléments & attributs -->
+        <auteur ident="auteur2">
+            <prenom>Bob</prenom>
+            <nom>Dupont</nom>
+            <pays>France</pays>
             <photo>https://www.google.ca/</photo>
         </auteur>
     </auteurs>
