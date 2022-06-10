@@ -13,8 +13,10 @@
 <!-- Schéma RelaxNG Compact -->
 <?oxygen RNGSchema="bibliotheque.rnc" type="compact"?>
 
-<!-- Feuille de transformation XSLT -->
+<!-- Feuilles de transformation XSLT -->
 <?xml-stylesheet type="text/xsl" href="bibliotheque-visualisation.xsl"?>
+<?xml-stylesheet type="text/xsl" href="auteurs-visualisation.xsl"?>
+<?xml-stylesheet type="text/xsl" href="livres-visualisation.xsl"?>
 
 <!-- Élément racine, schéma XSD -->
 <bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bibliotheque.xsd">
@@ -37,16 +39,16 @@
     <auteurs>
         <!-- 1er exemple de livre: tous les éléments & attributs -->
         <auteur ident="auteur1">
-            <nom>Tremblay</nom>
-            <prenom>Alice</prenom>
+            <nom>Dupont</nom>
+            <prenom>Bob</prenom>
             <pays>Canada</pays>
             <commentaire>Auteur exclusif de Livre 1.</commentaire>
             <photo>https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=580&amp;q=80</photo>
         </auteur>
         <!-- 2e exemple de livre: minimum nécessaire d'éléments & attributs -->
         <auteur ident="auteur2">
-            <prenom>Bob</prenom>
-            <nom>Dupont</nom>
+            <prenom>Alice</prenom>
+            <nom>Tremblay</nom>
             <pays>France</pays>
             <photo></photo>
         </auteur>
